@@ -6,8 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name = "Categoria.findAll",
+    query = "SELECT c "
+        + "FROM Categoria c")
 public class Categoria implements Serializable {
 
     @Id
