@@ -6,22 +6,21 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.edu.facthus.entity.Contato;
+import br.edu.facthus.entity.Categoria;
 
 @Stateless
-public class ContatosService {
+public class CategoriasService {
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void cadastra(Contato contato) {
-        entityManager.persist(contato);
-        System.out.println("Contato inserido com sucesso!");
+    public void cadastra(Categoria categoria) {
+        entityManager.persist(categoria);
     }
 
-    public List<Contato> lista() {
+    public List<Categoria> buscaCategorias() {
         return entityManager
-            .createQuery("SELECT c FROM Contato c", Contato.class)
+            .createNamedQuery("Categoria.findAll", Categoria.class)
             .getResultList();
     }
     

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui:composition template="/template/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://omnifaces.org/ui">
+	
+	<ui:define name="content">
+	    <h2>Cadastro de Categorias</h2>
+
+		<h:form>
+			Nome: <h:inputText value="#{categoriasController.categoria.nome}" />
+			<br/><br/>
+
+			<h:commandButton value="Cadastrar"
+				action="#{categoriasController.cadastra()}">
+			
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:commandButton value="Listar"
+				action="#{categoriasController.lista()}">
+			
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<br/><br/>
+
+			<h:dataTable value="#{categoriasController.categorias}" 
+				var="categoria">
+
+				<h:column>    				
+					<f:facet name="header">Id</f:facet>    				
+					#{categoria.id}
+				</h:column>
+
+				<h:column>    				
+					<f:facet name="header">Nome</f:facet>    				
+					#{categoria.nome}
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
