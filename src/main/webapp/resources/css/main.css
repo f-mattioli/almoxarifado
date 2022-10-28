@@ -1,5 +1,5 @@
 #header {
-	background-color: #3d3846;
+	background-color: #000000;
 	color: white;
 }
 
@@ -9,19 +9,25 @@
 }
 
 body {
+	background-color: #bab9b9;
 	margin: 0;
+	align-content: center;
 	height: 100%;
 }
 
 #wrapper {
-   height: 100vh;
-   display: grid;
-   grid-template-rows: 100px 1fr 30px;
+    align-content: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 30px;
 }
 
 #content {
-   overflow-y: scroll;
-   background-color: #f9f9f9;
+	margin-bottom: 150px;
+	margin-left: 550px;
+	align-self: center;
+    background-color: #bab9b9;
+    align-content: center;
 }
 
 .footerText {
@@ -38,7 +44,7 @@ body {
 }
 
 .width20 {
-	width: 20px !important;
+	width: 200px !important;
 }
 
 .noBorder {
@@ -47,7 +53,7 @@ body {
 
 .btn-search{
 	background-color: #efb519 !important; 
-	border: none !important;
+	border: #4d4c50 !important;
 	margin-left: 4px !important;
 
 }
