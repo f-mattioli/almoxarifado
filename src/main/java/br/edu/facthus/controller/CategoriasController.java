@@ -1,18 +1,21 @@
 package br.edu.facthus.controller;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
+import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.edu.facthus.entity.Categoria;
 import br.edu.facthus.service.CategoriasService;
+import br.edu.facthus.utils.FacesUtils;
 
 @Named
-@RequestScoped
-public class CategoriasController {
+@ViewScoped
+public class CategoriasController implements Serializable {
 	
 	@Inject
 	private CategoriasService categoriasService;
@@ -21,8 +24,19 @@ public class CategoriasController {
 	
 	private List<Categoria> categorias = new ArrayList<>();
 
+	@PostConstruct
+	public void init() {
+		categorias = categoriasService.buscaCategorias();
+	}
+
 	public void cadastra() {
-		categoriasService.cadastra(categoria);
+		try {
+			categoriasService.cadastra(categoria);
+			categoria = new Categoria();
+			categorias = categoriasService.buscaCategorias();
+		} catch (Exception e) {
+			FacesUtils.showError("Ocorreu um erro ao cadastrar a categoria.");
+		}
 	}
 
 	public void lista() {
