@@ -21,6 +21,7 @@
 		<version.war.plugin>3.3.1</version.war.plugin>
 
 		<version.javaee.api>8.0</version.javaee.api>
+		<version.primefaces>12.0.0</version.primefaces>
 
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -32,6 +33,13 @@
 			<artifactId>javaee-web-api</artifactId>
 			<version>${version.javaee.api}</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>${version.primefaces}</version>
 		</dependency>
 	</dependencies>
 
