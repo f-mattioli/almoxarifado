@@ -11,36 +11,27 @@
 	    <h2>Cadastro de Categorias</h2>
 
 		<h:form>
-			Nome: <h:inputText value="#{categoriasController.categoria.nome}" />
+			<p:outputLabel for="nome" value="Nome:" />
+			<p:inputText id="nome" value="#{categoriasController.categoria.nome}" />
 			<br/><br/>
 
-			<h:commandButton value="Cadastrar"
-				action="#{categoriasController.cadastra()}">
-			
-				<f:ajax execute="@form" render="@form" />
-			</h:commandButton>
+			<p:commandButton value="Cadastrar"
+				action="#{categoriasController.cadastra()}"
+				update="@form" />
 			<br/><br/>
 
-			<h:commandButton value="Listar"
-				action="#{categoriasController.lista()}">
-			
-				<f:ajax execute="@form" render="@form" />
-			</h:commandButton>
+			<p:commandButton value="Listar"
+				action="#{categoriasController.lista()}"
+				update="@form" />
 			<br/><br/>
 
-			<h:dataTable value="#{categoriasController.categorias}" 
+			<p:dataTable value="#{categoriasController.categorias}" 
 				var="categoria">
 
-				<h:column>    				
-					<f:facet name="header">Id</f:facet>    				
-					#{categoria.id}
-				</h:column>
+				<p:column headerText="Id" field="id" /> 
 
-				<h:column>    				
-					<f:facet name="header">Nome</f:facet>    				
-					#{categoria.nome}
-				</h:column>
-			</h:dataTable>
+				<p:column headerText="Nome" field="nome" />
+			</p:dataTable>
 		</h:form>
 	</ui:define>
 </ui:composition>

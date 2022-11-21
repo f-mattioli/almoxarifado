@@ -54,7 +54,15 @@
 					</div>
 				</div>
 			</div>
-		
+			<p:growl id="messages"/>
+
+			<p:menubar>
+				<p:menuitem value="Home" outcome="/index" icon="pi pi-home" />
+				<p:submenu label="Categorias" icon="pi pi-tag">
+					<p:menuitem value="Cadastro" outcome="/categorias/cadastro" />
+				</p:submenu>
+			</p:menubar>
+				
 			<div id="content" style="margin-top:50px">
 				<ui:insert name="content">Em construção...</ui:insert>
 			</div>
