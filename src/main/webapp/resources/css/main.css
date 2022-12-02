@@ -4,6 +4,7 @@
 	margin: 0;
 	align-content: left;
 	height: 100%;
+	
 }
 
 .headerText {
@@ -11,6 +12,8 @@
 	font-weight: bold;
 	color: black;
 	font-family: "Lucida Console";
+	font-size: 24px;
+	margin-bottom: 85px;
 }
 
 body {
@@ -90,12 +93,6 @@ body {
 	color: green;
 }
 
-menuitem{
-	align-content: center;
+.logo{
 	align-self: center;
-	margin-bottom: 1000px;
-	margin-left: 50px;
-	margin-right: 50px;
-	align-content: center;
-
 }

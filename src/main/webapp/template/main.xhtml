@@ -62,6 +62,7 @@
           <div class="ui-g-1 rightAlign">
             <h:form>
               <p:commandButton
+                value="Sair"
                 id="logout"
                 icon="pi pi-sign-out"
                 title="Sair"
@@ -74,12 +75,14 @@
       </div>
       <p:growl id="messages" />
 
-      <p:menubar>
-        <p:menuitem value="Home" outcome="/index" icon="pi pi-home" />
-        <p:submenu label="Categorias" icon="pi pi-tag">
-          <p:menuitem value="Cadastro" outcome="/categorias/cadastro" />
-        </p:submenu>
-      </p:menubar>
+      <nav>
+        <p:menubar>
+          <p:menuitem value="Home" outcome="/index" icon="pi pi-home" />
+          <p:submenu label="Categorias" icon="pi pi-tag">
+            <p:menuitem value="Cadastro" outcome="/categorias/cadastro" />
+          </p:submenu>
+        </p:menubar>
+      </nav>
 
       <div id="content" style="margin-top: 50px">
         <ui:insert name="content">Em construção...</ui:insert>
