@@ -1,15 +1,23 @@
 #header {
-	background-color: #000000;
+	background-color: 	#FFFFFF;
 	color: white;
+	margin: 0;
+	align-content: left;
+	height: 100%;
+	
 }
 
 .headerText {
 	text-align: center;
 	font-weight: bold;
+	color: black;
+	font-family: "Lucida Console";
+	font-size: 24px;
+	margin-bottom: 85px;
 }
 
 body {
-	background-color: #bab9b9;
+	background-color: 	#FFFFFF;
 	margin: 0;
 	align-content: center;
 	height: 100%;
@@ -27,7 +35,7 @@ body {
 	margin-left: 50px;
 	margin-right: 50px;
 	align-self: center;
-    background-color: #bab9b9;
+    background-color: #0000;
     align-content: center;
 }
 
@@ -54,7 +62,7 @@ body {
 
 .btn-search{
 	background-color: #efb519 !important; 
-	border: #4d4c50 !important;
+	border: #0000 !important;
 	margin-left: 4px !important;
 
 }
@@ -85,3 +93,6 @@ body {
 	color: green;
 }
 
+.logo{
+	align-self: center;
+}
